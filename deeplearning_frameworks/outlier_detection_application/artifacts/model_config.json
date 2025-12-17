@@ -1,0 +1,9 @@
+{
+  "ticker": "AAPL",
+  "sequence_length": 30,
+  "hidden_dim": 64,
+  "latent_dim": 16,
+  "number_of_layers": 2,
+  "dropout_rate": 0.2,
+  "input_dimension": 3
+}

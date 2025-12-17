@@ -94,7 +94,7 @@ class ModelManager:
             # Load weights if available
             if paths.model_path.exists():
                 self.model.load_state_dict(
-                    torch.load(paths.model_path, map_location=self.device)
+                    torch.load(paths.model_path, map_location=self.device, weights_only=True)
                 )
                 self.model.to(self.device)
                 self.model.eval()
@@ -262,16 +262,29 @@ async def predict(request: PredictionRequest) -> PredictionResponse:
         sequence = np.array(request.sequence.values)
         expected_length = model_manager.config.get("sequence_length", 30)
         
+        # Handle possible transposed input (3 x sequence_length)
+        if sequence.ndim == 2 and sequence.shape[0] == 3 and sequence.shape[1] == expected_length:
+            sequence = sequence.T
+        
+        # Validate shape
+        if sequence.ndim != 2:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail=f"Sequence must be 2D array, got shape {sequence.shape}"
+            )
+        
         if sequence.shape[0] != expected_length:
             raise HTTPException(
                 status_code=status.HTTP_400_BAD_REQUEST,
-                detail=f"Sequence length must be {expected_length}, got {sequence.shape[0]}"
+                detail=f"Sequence length must be {expected_length}, got {sequence.shape[0]}. "
+                       f"Expected shape: ({expected_length}, 3)"
             )
         
         if sequence.shape[1] != 3:
             raise HTTPException(
                 status_code=status.HTTP_400_BAD_REQUEST,
-                detail=f"Number of features must be 3, got {sequence.shape[1]}"
+                detail=f"Number of features must be 3, got {sequence.shape[1]}. "
+                       f"Expected shape: ({expected_length}, 3)"
             )
         
         # Scale input if scaler is available
@@ -334,18 +347,87 @@ async def predict_batch(request: BatchPredictionRequest) -> BatchPredictionRespo
             detail="Model not loaded"
         )
     
-    predictions = []
-    for sequence_data in request.sequences:
-        single_request = PredictionRequest(sequence=sequence_data)
-        pred = await predict(single_request)
-        predictions.append(pred)
+    try:
+        # Validate and collect sequences
+        sequences = []
+        expected_length = model_manager.config.get("sequence_length", 30)
+        
+        for idx, seq_data in enumerate(request.sequences):
+            arr = np.array(seq_data.values)
+            
+            # Handle transposed input
+            if arr.ndim == 2 and arr.shape[0] == 3 and arr.shape[1] == expected_length:
+                arr = arr.T
+            
+            if arr.ndim != 2:
+                raise HTTPException(
+                    status_code=status.HTTP_400_BAD_REQUEST,
+                    detail=f"Sequence {idx} must be 2D array"
+                )
+            
+            if arr.shape[0] != expected_length:
+                raise HTTPException(
+                    status_code=status.HTTP_400_BAD_REQUEST,
+                    detail=f"Sequence {idx}: length must be {expected_length}, got {arr.shape[0]}"
+                )
+            
+            if arr.shape[1] != 3:
+                raise HTTPException(
+                    status_code=status.HTTP_400_BAD_REQUEST,
+                    detail=f"Sequence {idx}: must have 3 features, got {arr.shape[1]}"
+                )
+            
+            sequences.append(arr)
+        
+        # Stack into batch
+        batch_input = np.stack(sequences)  # (batch_size, seq_len, 3)
+        
+        # Scale if scaler is available
+        if model_manager.scaler is not None:
+            batch_2d = batch_input.reshape(-1, 3)
+            batch_scaled = model_manager.scaler.transform(batch_2d).reshape(batch_input.shape)
+        else:
+            batch_scaled = batch_input
+        
+        # Run model
+        input_tensor = torch.FloatTensor(batch_scaled).to(model_manager.device)
+        with torch.no_grad():
+            preds = model_manager.model(input_tensor)
+        preds_np = preds.cpu().numpy()
+        
+        # Build response
+        predictions = []
+        total_anomalies = 0
+        
+        for i in range(len(sequences)):
+            pred = preds_np[i]
+            target = batch_scaled[i, -1]
+            mse = float(np.mean((target - pred) ** 2))
+            is_anomaly = mse > model_manager.anomaly_threshold
+            total_anomalies += int(is_anomaly)
+            
+            if model_manager.scaler is not None:
+                pred = model_manager.scaler.inverse_transform(pred.reshape(1, -1))[0]
+            
+            predictions.append(PredictionResponse(
+                prediction=pred.tolist(),
+                reconstruction_error=mse,
+                is_anomaly=is_anomaly,
+                anomaly_threshold=model_manager.anomaly_threshold
+            ))
+        
+        return BatchPredictionResponse(
+            predictions=predictions,
+            total_anomalies=total_anomalies
+        )
     
-    total_anomalies = sum(1 for p in predictions if p.is_anomaly)
-    
-    return BatchPredictionResponse(
-        predictions=predictions,
-        total_anomalies=total_anomalies
-    )
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Batch prediction error: {str(e)}"
+        )
 
 
 @app.post(
@@ -386,18 +468,39 @@ async def detect_outliers(request: OutlierDetectionRequest) -> OutlierDetectionR
             str(request.start_date),
             str(request.end_date)
         )
+        
+        if dataframe.empty:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail=f"No data found for ticker {request.ticker}"
+            )
+        
         dataframe = engineer_features(dataframe)
         
         # Extract features
         feature_columns = ["Return", "LogVolume", "HighLowSpread"]
         features = dataframe[feature_columns].values
+        
+        # Check if we have enough data
+        sequence_length = model_manager.config.get("sequence_length", 30)
+        if len(features) <= sequence_length:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail=f"Not enough data. Need at least {sequence_length + 1} records, got {len(features)}"
+            )
+        
         scaled_features = model_manager.scaler.transform(features)
         
         # Create sequences
-        sequence_length = model_manager.config.get("sequence_length", 30)
         input_sequences, target_values = create_sequences_and_targets(
             scaled_features, sequence_length
         )
+        
+        if len(input_sequences) == 0:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="Not enough data to create sequences for analysis"
+            )
         
         # Compute reconstruction errors
         input_tensor = torch.FloatTensor(input_sequences).to(model_manager.device)
@@ -408,7 +511,14 @@ async def detect_outliers(request: OutlierDetectionRequest) -> OutlierDetectionR
             for i in range(0, len(input_tensor), batch_size):
                 batch = input_tensor[i:i + batch_size]
                 predictions_list.append(model_manager.model(batch).cpu().numpy())
-            predictions = np.vstack(predictions_list)
+            
+            if len(predictions_list) > 0:
+                predictions = np.vstack(predictions_list)
+            else:
+                raise HTTPException(
+                    status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                    detail="Failed to generate predictions"
+                )
         
         reconstruction_errors = np.mean((target_values - predictions) ** 2, axis=1)
         
@@ -457,6 +567,8 @@ async def detect_outliers(request: OutlierDetectionRequest) -> OutlierDetectionR
             outliers=outliers
         )
         
+    except HTTPException:
+        raise
     except Exception as e:
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
