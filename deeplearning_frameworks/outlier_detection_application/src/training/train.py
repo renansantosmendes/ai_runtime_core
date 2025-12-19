@@ -20,13 +20,21 @@ import torch.optim as optim
 import pandas as pd
 from torch.utils.data import Dataset, DataLoader, random_split
 
-# Add parent directory to path for imports
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+# Add project root and its parent to path for imports
+current_file_path = os.path.abspath(__file__)
+src_dir = os.path.dirname(os.path.dirname(current_file_path)) # .../src
+outlier_app_dir = os.path.dirname(src_dir) # .../outlier_detection_application
+dl_frameworks_dir = os.path.dirname(outlier_app_dir) # .../deeplearning_frameworks
+project_root = os.path.dirname(dl_frameworks_dir) # .../ai_runtime_core
+puc_lectures_dir = os.path.dirname(project_root) # .../puc_lectures
+
+sys.path.insert(0, src_dir)
+sys.path.insert(0, puc_lectures_dir)
 
 from shared.model import ForecastLSTMAutoencoder, LSTMAttentionAutoencoder
 from shared.config import ModelConfig, PathConfig
 from shared.data_processing import prepare_data_for_training
-# from ai_runtime_core.deeplearning_frameworks.autoencoder.plot import PlotOutlierAnalyzer
+from ai_runtime_core.deeplearning_frameworks.autoencoder.plot import PlotOutlierAnalyzer
 
 
 class TimeSeriesForecastDataset(Dataset):
@@ -522,19 +530,27 @@ def run_training(config: ModelConfig = None, paths: PathConfig = None) -> None:
 
     print_error_statistics(reconstruction_errors)
 
-    # analyzer = dlfr.PlotOutlierAnalyzer(
-    #     dates=dates_array,
-    #     prices=prices_array,
-    #     errors=reconstruction_errors,
-    #     outliers_mask=outliers_mask,
-    #     threshold=threshold,
-    #     train_losses=training_losses,
-    #     val_losses=validation_losses,
-    #     best_epoch=best_epoch,
-    #     seq_length=SEQUENCE_LENGTH
-    # )
+    # Generate plots using PlotOutlierAnalyzer
+    # Handle potentially multi-column "Close" if data was downloaded for multiple tickers
+    if isinstance(dataframe["Close"], pd.DataFrame):
+        full_prices = dataframe["Close"].iloc[:, 0].values
+    else:
+        full_prices = dataframe["Close"].values
 
-    # analyzer.plot_all(ticker=TICKER)
+    analyzer = PlotOutlierAnalyzer(
+        dates=dataframe.index.values,
+        prices=full_prices,
+        errors=reconstruction_errors,
+        outliers_mask=outliers_mask,
+        threshold=threshold,
+        train_losses=training_losses,
+        val_losses=validation_losses,
+        best_epoch=best_epoch,
+        seq_length=config.sequence_length
+    )
+
+    print("\nGenerating analysis plots...")
+    analyzer.plot_all(ticker=config.ticker)
     
     print("\nTraining completed successfully!")
     print(f"Best validation loss: {min(validation_losses):.6f} at epoch {best_epoch}")
