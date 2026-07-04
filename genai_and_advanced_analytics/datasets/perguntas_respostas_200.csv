@@ -1,0 +1,206 @@
+pergunta,resposta
+Quais tipos de ERP o FinBrain suporta?,"FinBrain integra com SAP, Oracle, Microsoft Dynamics, e outros ERPs principais através de conectores padronizados."
+FinBrain pode analisar dados em tempo real?,"Sim, FinBrain processa dados em tempo real, permitindo análises e tomadas de decisão imediatas."
+Como o FinBrain melhora a comunicação financeira?,"FinBrain gera relatórios em linguagem executiva clara, facilitando comunicação entre áreas técnicas e liderança."
+O FinBrain suporta múltiplas moedas?,"Sim, FinBrain suporta análise de dados em múltiplas moedas e conversões automáticas."
+Qual é a precisão do FinBrain em previsões?,"FinBrain utiliza dados históricos reais para gerar previsões com alta precisão, sempre com transparência."
+FinBrain pode integrar com sistemas legados?,"Sim, FinBrain oferece conectores para sistemas legados através de APIs REST e GraphQL."
+Como o FinBrain garante segurança dos dados financeiros?,"Através de criptografia de ponta a ponta, isolamento por tenant e controle de acesso baseado em roles."
+FinBrain pode processar relatórios em PDF?,"Sim, FinBrain pode ingerir e processar dados de relatórios financeiros em PDF."
+Qual é o tempo médio de resposta do FinBrain?,"FinBrain responde a análises complexas em segundos, mesmo com grandes volumes de dados."
+O FinBrain pode fazer benchmarking?,"Sim, FinBrain compara métricas da organização com padrões da indústria e competidores."
+FinBrain oferece suporte a consolidação de dados?,"Sim, consolida dados de múltiplas filiais e centros de custo automaticamente."
+Como o RiskGen identifica riscos latentes?,RiskGen analisa documentos extensos usando NLP especializada para identificar riscos ocultos.
+RiskGen pode processar contratos em português?,"Sim, RiskGen suporta análise de documentos jurídicos em português e outros idiomas."
+Qual é a capacidade máxima de análise de documentos do RiskGen?,RiskGen foi testado com documentos de até 1000+ páginas com performance consistente.
+Como RiskGen detecta inconsistências contratuais?,"Através de comparação automática entre cláusulas, políticas internas e normas regulatórias."
+RiskGen pode alertar sobre cláusulas perigosas?,"Sim, identifica cláusulas de risco alto e fornece alertas com recomendações de ação."
+O RiskGen suporta contratos internacionais?,"Sim, pode processar contratos sujeitos a diferentes jurisdições e legislações."
+Como o RiskGen reduz tempo de due diligence?,Automatiza análise de centenas de documentos que levaria semanas para serem revisados manualmente.
+RiskGen pode ser integrado com sistemas de gestão documental?,"Sim, integra com repositórios de documentos enterprise como SharePoint e sistemas ECM."
+O RiskGen mantém histórico de alterações de riscos?,"Sim, rastreia mudanças de risco ao longo do tempo com trilha de auditoria completa."
+Como o EduMentor personaliza o aprendizado?,"Analisa padrões de comportamento do aluno para ajustar ritmo, nível de dificuldade e estilo de explicação."
+EduMentor pode identificar dificuldades de aprendizado?,"Sim, detecta automaticamente tópicos onde o aluno está tendo dificuldade e oferece reforço."
+O EduMentor pode adaptar para diferentes estilos de aprendizagem?,"Sim, ajusta conteúdo para aprendizes visuais, auditivos, cinestésicos e leitores."
+EduMentor oferece feedback em tempo real?,"Sim, fornece feedback imediato após cada resposta, com explicações do erro."
+Como o EduMentor motiva alunos desmotivados?,"Através de gamificação, progresso visual e reconhecimento de conquistas."
+O EduMentor pode ensinar programação?,"Sim, é eficaz em linguagens de programação com exemplos práticos e debugging guiado."
+EduMentor suporta aprendizado colaborativo?,"Sim, pode facilitar discussões e trabalho em grupo com moderação automática."
+Como o EduMentor acompanha o progresso?,"Gera relatórios detalhados de progresso para aluno, professor e instituição."
+O EduMentor pode trabalhar offline?,"Sim, funciona tanto online quanto em modo offline com sincronização posterior."
+EduMentor oferece certificados de conclusão?,"Sim, gera certificados verificáveis ao término dos cursos com métricas de desempenho."
+CourseGen pode gerar cursos do zero?,"Sim, cria cursos completos a partir apenas de objetivos educacionais e público-alvo."
+Qual é o tempo médio para gerar um curso com CourseGen?,"Um curso completo pode ser gerado em minutos, comparado a semanas de criação manual."
+CourseGen suporta recursos multimídia?,"Sim, integra textos, imagens, vídeos e interatividades no conteúdo gerado."
+Como CourseGen garante qualidade pedagógica?,Alinha automaticamente conteúdo com taxonomias educacionais e padrões de qualidade.
+CourseGen pode gerar avaliações?,"Sim, cria questões de múltipla escolha, dissertativas e práticas alinhadas ao conteúdo."
+O CourseGen suporta educação corporativa?,"Sim, especializado em programas de capacitação técnica e desenvolvimento profissional."
+CourseGen pode adaptar cursos existentes?,"Sim, pode remixar e adaptar conteúdo baseado em materiais já disponíveis."
+Como CourseGen mantém atualizado um curso?,Permite atualizações automáticas e gerenciadas de conteúdo quando informações mudam.
+CourseGen oferece templates de curso?,"Sim, inclui templates pré-estruturados para acelerar ainda mais a criação."
+O CourseGen pode gerar cursos em múltiplos idiomas?,"Sim, gera conteúdo em várias línguas mantendo consistência pedagógica."
+ClinicaGPT pode auxiliar em triage de pacientes?,"Sim, ajuda na priorização baseada em protocolos clínicos e severidade de sintomas."
+Como ClinicaGPT melhora a documentação clínica?,Sugere estrutura e conteúdo para prontuários eletrônicos baseado em melhores práticas.
+ClinicaGPT pode alertar sobre interações medicamentosas?,"Sim, consulta bases de dados de medicamentos para identificar potenciais interações."
+O ClinicaGPT funciona em ambientes hospitalares críticos?,"Sim, projetado especificamente com SLA hospitalar e alta disponibilidade."
+ClinicaGPT pode sugerir diferenciais diagnósticos?,"Não, opera como apoio à organização de informações, não faz diagnósticos."
+Como ClinicaGPT respeita privacidade do paciente?,Segue protocolos de LGPD e HIPAA com criptografia e controle de acesso rigoroso.
+ClinicaGPT pode acompanhar histórico do paciente?,"Sim, mantém contexto de atendimentos anteriores para continuidade do cuidado."
+O ClinicaGPT integra com prontuários eletrônicos?,"Sim, conecta-se com EHRs principais para acessar dados clínicos autorizados."
+ClinicaGPT pode auxiliar em pesquisa clínica?,"Sim, ajuda a organizar e estruturar dados para estudos clínicos."
+Como ClinicaGPT reduz erros clínicos?,Oferece sugestões baseadas em evidências e protocolos padronizados.
+Qual é a diferença entre FinBrain e sistemas BI tradicionais?,"FinBrain oferece análise em linguagem natural, enquanto BI requer queries técnicas."
+Como EduMentor e CourseGen se complementam?,"CourseGen cria conteúdo, EduMentor personaliza a entrega para cada aluno."
+RiskGen pode substituir um departamento jurídico?,"Não, mas reduz drasticamente o esforço operacional e aumenta consistência."
+Posso usar todos os 5 produtos SynapseAI juntos?,"Sim, foram projetados para trabalhar de forma integrada e complementar."
+Qual produto é melhor para startups?,Depende do setor; recomendamos começar com o produto do seu domínio principal.
+Os produtos SynapseAI usam dados dos clientes para treinar?,"Não, cada cliente tem dados isolados e nenhum treinamento cruza dados entre clientes."
+Como os modelos de IA da SynapseAI são atualizados?,"Regularmente, com melhorias de segurança e capacidades, sem interromper seus serviços."
+Posso fazer fine-tuning customizado dos modelos?,"Sim, oferecemos programas de customização para casos de uso específicos."
+Qual é a política de retenção de dados da SynapseAI?,Dados são mantidos enquanto o contrato está ativo e deletados securely após término.
+Como é feito o backup dos dados da SynapseAI?,Backups automáticos contínuos com múltiplas cópias em diferentes locações.
+Qual é o SLA geral da SynapseAI?,Oferecemos 99.9% de uptime com suporte 24/7 para clientes enterprise.
+A SynapseAI oferece treinamento para implementação?,"Sim, inclui onboarding e treinamento especializado para equipes."
+Como começo a usar os produtos SynapseAI?,"Agende uma demo com nosso time, define requisitos e começamos implementação."
+Qual é o período mínimo de contrato?,"Normalmente 12 meses, mas pode negociar conforme seu caso."
+Os preços da SynapseAI incluem suporte?,"Sim, suporte técnico está incluído em todos os planos."
+Posso fazer teste piloto antes de contratar?,"Sim, oferecemos PoC (Proof of Concept) para validar valor antes do contrato."
+Como é feita a integração com sistemas legados?,Desenvolvemos conectores customizados baseado na arquitetura do seu sistema.
+Qual é a curva de aprendizado para usar os produtos?,Intuitivos e pronto para usar; treinamento formal dura de alguns dias a semanas.
+Os produtos SynapseAI funcionam com dados não estruturados?,"Sim, especialmente FinBrain, RiskGen e ClinicaGPT que trabalham com documentos."
+Qual é o volume de dados que SynapseAI consegue processar?,Sem limite prático; otimizado para volumes até Terabytes.
+FinBrain pode fazer consolidação de múltiplas moedas?,"Sim, consolida e converte automaticamente dados em múltiplas moedas."
+Como FinBrain lida com períodos fiscais diferentes?,Ajusta calendários para diferentes períodos fiscais por jurisdição.
+FinBrain pode gerar análises ad-hoc?,"Sim, cria análises customizadas respondendo perguntas específicas do usuário."
+Como FinBrain trata dados faltantes?,Identifica e relata dados faltantes com opções para interpolação quando apropriado.
+FinBrain suporta orçamento e previsão?,"Sim, cria budgets e forecasts com múltiplos cenários."
+Como FinBrain valida a integridade dos dados?,Executa validações automáticas e relata inconsistências e anomalias.
+FinBrain pode fazer análise de sensibilidade?,"Sim, testa como mudanças em variáveis impactam resultados financeiros."
+O FinBrain oferece análise de rentabilidade por cliente?,"Sim, calcula lucratividade detalhada por cliente, produto ou segmento."
+FinBrain pode rastrear KPIs?,"Sim, monitora KPIs financeiros com alertas quando saem de faixa."
+Como RiskGen trata documentos versionados?,Compara versões e identifica mudanças de risco entre versões.
+RiskGen pode analisar emails?,"Sim, pode processar emails e comunicações para identificar riscos."
+Como RiskGen lida com jargão jurídico específico?,Treinado em linguagem jurídica para interpretar corretamente termos técnicos.
+RiskGen pode gerar relatórios de conformidade?,"Sim, gera relatórios estruturados prontos para auditorias."
+O RiskGen pode monitorar mudanças regulatórias?,"Sim, alerta sobre novas regulações que afetam seus contratos."
+RiskGen suporta assinatura digital de documentos?,"Integra com plataformas de assinatura, mas não assina diretamente."
+Como RiskGen prioriza riscos para ação?,"Por severidade, probabilidade e impacto financeiro potencial."
+RiskGen pode ser usado para M&A due diligence?,"Sim, é especialmente poderoso para análise rápida em transações."
+O RiskGen detecta fraude documental?,"Sim, identifica inconsistências que podem indicar documentos fraudulentos."
+RiskGen pode rastrear status de remediação de riscos?,"Sim, mantém histórico de ações e verifica se foram implementadas."
+Como EduMentor lida com alunos avançados?,Aumenta automaticamente a dificuldade e oferece conteúdo acelerado.
+EduMentor pode ser usado para treinamento corporativo?,"Sim, especializado em educação corporativa e desenvolvimento profissional."
+Como EduMentor motiva alunos com diferentes níveis?,Oferece desafios apropriados que mantêm engajamento sem frustrar.
+O EduMentor pode avaliar competências?,"Sim, mede domínio de competências específicas conforme progresso."
+EduMentor suporta mentoría entre pares?,"Sim, facilita aprendizado colaborativo entre alunos."
+Como EduMentor lida com conteúdo complexo?,Decompõe em módulos menores com verificação de compreensão frequente.
+EduMentor pode ser usado para reconversão profissional?,"Sim, perfeito para treinar pessoas em novas profissões e habilidades."
+O EduMentor oferece suporte em tempo real?,"Sim, disponível 24/7 para responder dúvidas dos alunos."
+EduMentor pode integrar conteúdo externo?,"Sim, complementa com vídeos, artigos e recursos de plataformas externas."
+Como EduMentor reduz taxa de abandono?,Através de engajamento adaptativo e reconhecimento de progresso.
+CourseGen pode gerar cursos em formatos diferentes?,"Sim, adapta para e-learning, presencial, blended e mobile."
+Como CourseGen alinha com objetivos estratégicos?,Incorpora metas corporativas na estrutura pedagógica dos cursos.
+CourseGen pode gerar cursos para compliance?,"Sim, cria programas de treinamento mandatório com rastreamento."
+O CourseGen suporta localização para outros idiomas?,"Sim, adapta conteúdo mantendo contexto cultural e pedagógico."
+CourseGen pode gerar cursos soft skills?,"Sim, cria cursos em comunicação, liderança, inteligência emocional."
+Como CourseGen reduz tempo de volta ao mercado?,Gera cursos em dias em vez de meses.
+CourseGen pode gerar cursos para certificação?,"Sim, alinhado com padrões de certificação profissional."
+O CourseGen oferece análise de efetividade?,"Sim, mede impacto dos cursos no desempenho dos alunos."
+CourseGen pode adaptar a ritmo de aprendizado corporativo?,"Sim, cria programas que se encaixam no calendário operacional da empresa."
+Como CourseGen garante consistência de marca?,Aplica templates de marca corporativa em todo o material gerado.
+ClinicaGPT pode auxiliar em second opinion?,"Não, mas ajuda a organizar informações para discussão com outros médicos."
+Como ClinicaGPT reduz tempo administrativo?,Automatiza preenchimento de formulários e geração de documentos.
+ClinicaGPT pode interpretar exames de imagem?,"Não, mas pode correlacionar resultados com informações clínicas."
+O ClinicaGPT funciona com todas as especialidades?,"Sim, pode ser customizado para qualquer especialidade médica."
+ClinicaGPT pode acompanhar pacientes crônicos?,"Sim, monitora evolução com base em protocolos de doenças crônicas."
+Como ClinicaGPT reduz readmissões?,Garante documentação completa e comunicação clara na alta.
+ClinicaGPT pode auxiliar em educação do paciente?,"Sim, gera materiais educativos compreensíveis para pacientes."
+O ClinicaGPT suporta telemedicina?,"Sim, funciona em consultas remotas com segurança HIPAA."
+ClinicaGPT pode detectar sinais de deterioração?,"Sim, compara dados atuais com histórico para identificar mudanças."
+Como ClinicaGPT contribui para saúde pública?,Gera dados agregados para monitoramento epidemiológico sem expor pacientes.
+FinBrain pode fazer reconciliação contábil?,"Sim, identifica e lista automaticamente itens não reconciliados."
+Como FinBrain trata variações de taxa de câmbio?,Marca transações com taxa utilizada e permite análise de impacto.
+FinBrain pode rastrear despesas departamentais?,"Sim, segmenta despesas por centro de custo, departamento ou projeto."
+O FinBrain oferece análise de fluxo de caixa?,"Sim, projeta fluxos futuros e identifica períodos de aperto."
+FinBrain pode fazer análise de captação?,"Sim, analisa estrutura de capital e custo das diferentes fontes."
+Como FinBrain melhora produtividade do CFO?,"Reduz análises manuais de horas para minutos, liberando tempo estratégico."
+FinBrain pode rastrear métricas de retorno?,"Sim, calcula ROI, ROIC e outras métricas de retorno automaticamente."
+O FinBrain suporta orçamentação baseada em atividade?,"Sim, estrutura orçamentos por atividades e direcionadores de custo."
+FinBrain pode gerar análise de lucratividade cruzada?,"Sim, mostra correlações de rentabilidade entre diferentes dimensões."
+Como FinBrain auxilia em pricing?,Analisa custos e margens para otimizar estratégia de preços.
+RiskGen pode monitorar conformidade regulatória contínua?,"Sim, verifica atualização de documentos contra normas vigentes."
+Como RiskGen trata questões de jurisdição múltipla?,Entende diferentes leis aplicáveis a cada contrato.
+RiskGen pode alertar sobre vencimentos contratuais?,"Sim, rastreia datas críticas e lembretes automaticamente."
+O RiskGen pode ser usado para análise de M&A?,"Sim, acelera significativamente due diligence em transações."
+RiskGen pode detectar conflitos de interesse?,"Sim, identifica partes relacionadas e potenciais conflitos."
+Como RiskGen melhora negociação de contratos?,Identifica cláusulas problemáticas antes da assinatura.
+RiskGen pode analisar termos de parceria?,"Sim, valida alinhamento com políticas corporativas."
+O RiskGen suporta análise de NDAs?,"Sim, verifica conformidade com padrões corporativos de confidencialidade."
+RiskGen pode rastrear exposições de risco por cliente?,"Sim, agrega riscos por relacionamento comercial."
+Como RiskGen reduz exposição legal?,Detecta riscos antes de se tornarem problemas legais custosos.
+EduMentor pode avaliar transferência de conhecimento?,"Sim, mede capacidade de aplicar aprendizado em novos contextos."
+Como EduMentor suporta aprendizado ao longo da vida?,Acompanha progresso contínuo com recomendações de desenvolvimento.
+EduMentor pode ser usado para onboarding?,"Sim, acelera integração de novos funcionários com aprendizado personalizado."
+O EduMentor oferece análise preditiva de sucesso?,"Sim, identifica alunos em risco de falhar e recomenda intervenções."
+EduMentor pode gerar planos de desenvolvimento individual?,"Sim, recomenda caminhos de aprendizado baseado em objetivos."
+Como EduMentor lida com barreiras de aprendizado?,Ajusta estratégias para superar dificuldades específicas de cada aluno.
+EduMentor pode combinar aprendizado formal e informal?,"Sim, integra cursos formais com recursos informais."
+O EduMentor oferece suporte a múltiplos formatos?,"Sim, video, áudio, texto, interactive - adapta ao seu estilo."
+EduMentor pode rastrear engajamento?,"Sim, gera métricas de engajamento com identificação de perda de interesse."
+Como EduMentor contribui para redução de turnover?,Investimento em desenvolvimento melhora satisfação e retenção.
+CourseGen pode gerar microlearning?,"Sim, cria módulos pequenos de 5-10 minutos para aprendizado rápido."
+Como CourseGen garante atualização de conteúdo?,Permite atualizações rápidas e rollout programado de novas versões.
+CourseGen pode gerar cursos para diferentes públicos?,"Sim, adapta um conteúdo base para diferentes níveis e perfis."
+O CourseGen suporta gamificação?,"Sim, incorpora elementos de jogo para aumentar engajamento."
+CourseGen pode gerar conteúdo interativo?,"Sim, cria simulações, estudos de caso e cenários interativos."
+Como CourseGen reduz custo de desenvolvimento?,Elimina horas de trabalho de instructional design e criação manual.
+CourseGen pode medir impacto no negócio?,"Sim, correlaciona aprendizado com métricas de desempenho corporativo."
+O CourseGen suporta aprendizado social?,"Sim, incorpora elementos de colaboração e discussão."
+CourseGen pode gerar cursos de reskilling?,"Sim, especializado em preparar pessoas para novas roles."
+Como CourseGen mantém qualidade educacional?,Alinha com padrões ADDIE e melhores práticas pedagógicas.
+ClinicaGPT pode auxiliar em gestão de cuidados?,"Sim, coordena informações para continuidade do cuidado."
+Como ClinicaGPT reduz erros de medicação?,Verifica interações e alergias contra histórico do paciente.
+ClinicaGPT pode gerar sumários clínicos?,"Sim, cria resumos estruturados de atendimentos."
+O ClinicaGPT funciona em diferentes ambientes?,"Sim, pronto para hospital, clínica, consultório e telemedicina."
+ClinicaGPT pode auxiliar em triagem por prioridade?,"Sim, ajuda a ordenas casos por urgência usando protocolos."
+Como ClinicaGPT melhora comunicação entre equipes?,Estrutura informações para handoff claro entre profissionais.
+ClinicaGPT pode rastrear aderência ao protocolo?,"Sim, verifica se protocolos estão sendo seguidos nos atendimentos."
+O ClinicaGPT oferece suporte em idiomas?,"Sim, funciona em múltiplos idiomas para ambientes diversos."
+ClinicaGPT pode gerar alertas clínicos?,"Sim, baseado em evidências e desvios de normalidade."
+Como ClinicaGPT contribui para qualidade assistencial?,Garante padronização e uso de melhores práticas em todos os atendimentos.
+Como a SynapseAI garante transparência de IA?,"Todos os processos de IA da SynapseAI são auditáveis e explicáveis, com rastreamento completo de decisões."
+Quais certificações de segurança SynapseAI possui?,"SynapseAI possui certificações ISO 27001, SOC 2 Type II e compliance com GDPR/LGPD."
+Como é o suporte técnico da SynapseAI?,"Suporte 24/7 para clientes enterprise, com SLA de resposta em 1 hora para problemas críticos."
+Posso consultar antes de implementar um produto SynapseAI?,"Sim, oferecemos consultorias gratuitas para avaliar qual produto melhor se encaixa."
+A SynapseAI oferece garantia de resultados?,Oferecemos garantia de performance técnica; resultados de negócio dependem da implementação.
+Como é feita a migração de dados para SynapseAI?,"Processo gerenciado com zero downtime, validação completa e rollback se necessário."
+Qual é a governança de dados na SynapseAI?,"Rigorosa: acesso baseado em papéis, logs de auditoria, criptografia em trânsito e repouso."
+A SynapseAI trabalha com dados sensíveis?,"Sim, projetada para dados de saúde, financeiros e classificados com máxima proteção."
+Como a SynapseAI lida com LGPD e direito ao esquecimento?,"Implementa processos para deletar dados conforme solicitado, com certificação de exclusão."
+Posso auditar a SynapseAI?,"Sim, oferecemos auditorias de segurança e relatórios de conformidade regularmente."
+FinBrain pode fazer previsão de fluxo de caixa sazonal?,"Sim, identifica padrões sazonais e ajusta previsões automaticamente."
+Como FinBrain trata outliers e anomalias?,"Detecta, alerta e permite opções para incluir/excluir conforme contexto."
+FinBrain pode fazer análise de cohorte?,"Sim, agrupa dados por período para análise de tendências."
+O FinBrain suporta análise de histórico?,"Sim, permite análises year-over-year e comparações históricas."
+FinBrain pode fazer consolidação intercompany?,"Sim, elimina transações cruzadas e consolida dados corporativos."
+Como FinBrain trata reprocessamentos contábeis?,Rastreia todas as versões e permite reverter a qualquer período anterior.
+FinBrain pode rastrear mudanças contábeis?,"Sim, documenta todas as alterações com quem fez e quando."
+O FinBrain suporta análise de capital de giro?,"Sim, monitora componentes e melhoria de ciclo operacional."
+FinBrain pode fazer análise de sensibilidade de taxa?,"Sim, modela impacto de mudanças de taxa de juros."
+Como FinBrain reduz erros em relatórios?,Validação automática e checagens cruzadas eliminam maioria dos erros manuais.
+RiskGen pode monitorar saneamento de contratos?,"Sim, identifica contratos desatualizados que precisam renovação."
+Como RiskGen detecta cláusulas não standard?,Compara contra padrões corporativos e legislativos estabelecidos.
+RiskGen pode rastrear status de negociação?,"Sim, mantém histórico de iterações e pontos pendentes."
+O RiskGen pode gerar alertas regulatórios?,"Sim, monitora mudanças legais que afetam seus contratos."
+RiskGen pode fazer análise de exposição?,"Sim, quantifica riscos financeiros potenciais por contrato."
+Como RiskGen trata documentos vencidos?,Identifica vencimentos próximos e recomenda ações.
+RiskGen pode comparar termos entre fornecedores?,"Sim, benchmarking automático de cláusulas e termos."
+O RiskGen detecta potencial insolvência de parceiros?,"Não diagnóstico, mas alerta sobre indicadores de risco."
+RiskGen pode auxiliar em conformidade sectorial?,"Sim, ajusta análises para regulações específicas do setor."
+Como RiskGen reduz ciclo de aprovação?,Pré-valida documentos reduzindo necessidade de revisão manual.
+EduMentor pode integrar conteúdo de universidades?,"Sim, conecta com plataformas educacionais como Coursera, edX."
+Como EduMentor lida com alunos que estudam à noite?,Adapta sugestões de estudos conforme seu padrão de acesso.
+EduMentor pode recomendar mentor humano?,"Sim, identifica quando necessário mentor e facilita conexão."
+O EduMentor oferece suporte a neurodivergentes?,"Sim, adapta para disléxia, TDAH e outras condições."
+EduMentor pode gerar certificados verificáveis?,"Sim, integra com plataformas de blockchain para verificação."
+Como EduMentor reduz custo total educacional?,Elimina retrabalho e reprovações através de aprendizado eficiente.
